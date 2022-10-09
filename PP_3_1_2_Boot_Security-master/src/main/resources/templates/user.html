@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Spring Security Example</title>
+</head>
+<body>
+<h1>User info</h1>
+<h2 th:utext="${user.name}">Name: name</h2>
+<table border="1">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Age</th>
+        <th>Username</th>
+        <th>Password</th>
+    </tr>
+    <td th:utext="${user.id}">Id</td>
+    <td th:utext="${user.name}">Name</td>
+    <td th:utext="${user.surname}">Surname</td>
+    <td th:utext="${user.age}">Id</td>
+    <td th:utext="${user.username}">Username</td>
+    <td th:utext="${user.password}">Password</td>
+</table>
+<br>
+<button class="buttonLogout"
+        onclick="window.location.href = '/logout';">Logout</button>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:form="http://www.w3.org/1999/html"
+      lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+</head>
+<body>
+<h1>Update User</h1>
+<br>
+
+<form action="#" th:action="@{/admin/update}" th:object="${user}" method="post">
+
+        <label for="id">Id</label>
+        <input readonly type="number" th:field="*{id}" id="id" placeholder="ID"/>
+        <br><br>
+        <label for="name">Name</label>
+        <input type="text" th:field="*{name}" id="name" placeholder="Name"/>
+        <br><br>
+        <label for="surname">Surname</label>
+        <input type="text" th:field="*{surname}" id="surname" placeholder="Surname"/>
+        <br><br>
+        <label for="age">Age</label>
+        <input type="text" th:field="*{age}" id="age" placeholder="Age"/>
+        <br><br>
+        <label for="username">Username</label>
+        <input type="text" th:field="*{username}" id="username" placeholder="username"/>
+        <br><br>
+        <label for="password">Password</label>
+        <input type="text" th:field="*{password}" id="password" placeholder="password"/>
+        <br><br>
+        <label>Roles:
+                <select size="2" multiple name="listRoles" required="required">
+                        <option selected="selected" value="1">USER</option>
+                        <option value="2">ADMIN</option>
+                </select>
+        </label>
+        <br><br>
+        <input type="submit" value="Update User"/>
+
+        <br>
+        <br>
+        <button class="buttonLogout"
+                onclick="window.location.href = '/logout';">Logout</button>
+</form>
+
+
+</body>
+</html>
